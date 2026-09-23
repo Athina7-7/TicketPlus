@@ -28,6 +28,7 @@ if __name__ == "__main__":
    # resultado = service.comprar("Athina", 3)
    resultado = service.comprar(UsuarioDummy(), 2)
    email_mock.enviar_confirmacion.assert_called_once();
+   service.comprar(UsuarioDummy(), 1)
    print(resultado)
    print(inventario_spy.veces_consultado);
    
